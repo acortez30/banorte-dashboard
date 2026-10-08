@@ -1,0 +1,41 @@
+export const help: Record<string, string> = {
+  "help.title": "Ayuda",
+  "help.subtitle": "Centro de ayuda y soporte para administradores",
+  "help.email": "Correo electrónico",
+  "help.phone": "Teléfono",
+  "help.liveChat": "Chat en vivo",
+  "help.liveChatDesc": "Disponible en horario laboral",
+  "help.hours": "Horario de atención",
+  "help.hoursValue": "Lun - Vie, 9:00 - 18:00",
+  "help.faq": "Preguntas frecuentes",
+
+  "help.contact.title": "Contactar a Droppi",
+  "help.contact.subtitle":
+    "Envíanos tus datos y nuestro equipo se pondrá en contacto contigo.",
+  "help.contact.name": "Nombre",
+  "help.contact.surname": "Apellido",
+  "help.contact.email": "Correo electrónico",
+  "help.contact.company": "Empresa",
+  "help.contact.companyOptional": "Empresa (opcional)",
+  "help.contact.howHear": "¿Cómo nos conociste?",
+  "help.contact.message": "Mensaje",
+  "help.contact.messageOptional": "Mensaje (opcional)",
+  "help.contact.namePlaceholder": "Tu nombre",
+  "help.contact.surnamePlaceholder": "Tu apellido",
+  "help.contact.emailPlaceholder": "nombre@empresa.com",
+  "help.contact.companyPlaceholder": "Nombre de la empresa",
+  "help.contact.howHearPlaceholder": "Ej. Google, Instagram, recomendación...",
+  "help.contact.messagePlaceholder": "Cuéntanos cómo podemos ayudarte",
+  "help.contact.send": "Enviar solicitud",
+  "help.contact.sending": "Enviando...",
+  "help.contact.success": "Solicitud enviada correctamente.",
+  "help.contact.successDescription":
+    "Nuestro equipo recibió tu información y podrá ponerse en contacto contigo.",
+  "help.contact.error": "No fue posible enviar la solicitud.",
+  "help.contact.required": "Completa todos los campos obligatorios.",
+  "help.contact.invalidEmail": "Ingresa un correo electrónico válido.",
+  "help.contact.howHearMin":
+    "Indica cómo nos conociste usando al menos 2 caracteres.",
+  "help.contact.rateLimit":
+    "Por seguridad, el servicio permite hasta 5 solicitudes cada 2 minutos por IP.",
+};

@@ -1,0 +1,224 @@
+/* =========================================================
+   EMPLOYEE HISTORY TABLE
+   ========================================================= */
+
+.employee-history-table {
+  min-width: 0;
+}
+
+.employee-history-table__scroll {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.employee-history-table table {
+  width: 100%;
+
+  min-width: 720px;
+
+  border-collapse: collapse;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.employee-history-table th {
+  height: 40px;
+
+  padding:
+    0
+    16px;
+
+  border-bottom: 1px solid #dedfe2;
+
+  background: #f6f6f7;
+
+  color: #5c5e62;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.035em;
+
+  text-align: left;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   ROW
+   ========================================================= */
+
+.employee-history-table td {
+  height: 56px;
+
+  padding:
+    0
+    16px;
+
+  border-bottom: 1px solid #e7e7e8;
+
+  color: #5b5d62;
+
+  font-size: 10px;
+
+  vertical-align: middle;
+}
+
+.employee-history-table
+  tbody
+  tr {
+  transition:
+    background 120ms ease;
+}
+
+.employee-history-table
+  tbody
+  tr:hover {
+  background: #fafafa;
+}
+
+.employee-history-table
+  tbody
+  tr:last-child
+  td {
+  border-bottom: 0;
+}
+
+
+/* =========================================================
+   TIME
+   ========================================================= */
+
+.employee-history-table__time {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  min-height: 25px;
+
+  padding:
+    0
+    8px;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+}
+
+.employee-history-table__time--entry {
+  background:
+    rgba(
+      5,
+      150,
+      105,
+      0.08
+    );
+
+  color: #087e5d;
+}
+
+.employee-history-table__time--exit {
+  background:
+    rgba(
+      235,
+      0,
+      41,
+      0.07
+    );
+
+  color: #d60026;
+}
+
+
+/* =========================================================
+   LOCKER
+   ========================================================= */
+
+.employee-history-table__locker {
+  display: inline-flex;
+
+  min-height: 24px;
+
+  align-items: center;
+
+  padding:
+    0
+    8px;
+
+  border-radius: 7px;
+
+  background: #f0f1f2;
+
+  color: #55575c;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.employee-history-table__compartment {
+  color: #35363a;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.employee-history-table__empty {
+  height: 130px !important;
+
+  color: #92949a !important;
+
+  text-align: center !important;
+}
+
+
+/* =========================================================
+   DARK
+   ========================================================= */
+
+.dark
+  .employee-history-table th {
+  border-color: #36383c;
+
+  background: #292b2f;
+
+  color: #b3b5ba;
+}
+
+.dark
+  .employee-history-table td {
+  border-color: #36383c;
+
+  color: #d2d3d5;
+}
+
+.dark
+  .employee-history-table
+  tbody
+  tr:hover {
+  background: #292b2f;
+}
+
+.dark
+  .employee-history-table__locker {
+  background: #303236;
+
+  color: #e1e2e4;
+}
+
+.dark
+  .employee-history-table__compartment {
+  color: #f4f4f5;
+}

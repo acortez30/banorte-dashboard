@@ -1,0 +1,801 @@
+/* =========================================================
+   BANORTE DASHBOARD — USERS TABLE
+   ========================================================= */
+
+.users-table {
+  overflow: visible;
+
+  border:
+    1px solid
+    #dedfe2;
+
+  border-radius: 12px;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 1px 2px
+      rgba(
+        15,
+        23,
+        42,
+        0.025
+      ),
+    0 3px 10px
+      rgba(
+        15,
+        23,
+        42,
+        0.03
+      );
+}
+
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.users-table__toolbar {
+  display: flex;
+
+  min-height: 62px;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  padding:
+    11px
+    16px;
+
+  border-bottom:
+    1px solid
+    #e2e4e7;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.users-table__search {
+  position: relative;
+
+  width: 100%;
+  max-width: 360px;
+}
+
+.users-table__search-icon {
+  position: absolute;
+
+  z-index: 1;
+
+  top: 50%;
+  left: 12px;
+
+  color:
+    #85868a;
+
+  pointer-events: none;
+
+  transform:
+    translateY(-50%);
+}
+
+.users-table__search-input {
+  width: 100%;
+  height: 39px;
+
+  padding:
+    0
+    12px
+    0
+    37px;
+
+  border:
+    1px solid
+    #d3d4d7;
+
+  border-radius:
+    8px;
+
+  outline: none;
+
+  background:
+    #ffffff;
+
+  color:
+    #252525;
+
+  font-family: inherit;
+
+  font-size:
+    12px;
+
+  transition:
+    border-color
+      140ms ease,
+    box-shadow
+      140ms ease,
+    background
+      140ms ease;
+}
+
+.users-table__search-input::placeholder {
+  color:
+    #929499;
+}
+
+.users-table__search-input:hover {
+  border-color:
+    #bfc1c5;
+}
+
+.users-table__search-input:focus {
+  border-color:
+    #eb0029;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      235,
+      0,
+      41,
+      0.07
+    );
+}
+
+
+/* =========================================================
+   COUNT
+   ========================================================= */
+
+.users-table__count {
+  display: inline-flex;
+
+  flex-shrink: 0;
+
+  align-items: center;
+
+  gap: 6px;
+
+  min-height: 31px;
+
+  padding:
+    0
+    10px;
+
+  border:
+    1px solid
+    #e3e4e6;
+
+  border-radius:
+    8px;
+
+  background:
+    #f7f7f8;
+
+  color:
+    #74767b;
+
+  font-size:
+    10px;
+
+  font-weight:
+    500;
+}
+
+.users-table__count svg {
+  color:
+    #85878c;
+}
+
+.users-table__count strong {
+  color:
+    #343539;
+
+  font-weight:
+    700;
+}
+
+
+/* =========================================================
+   SCROLL
+   ========================================================= */
+
+.users-table__scroll {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.users-table__content {
+  width: 100%;
+
+  min-width: 900px;
+
+  border-collapse:
+    collapse;
+}
+
+.users-table__content th {
+  height: 42px;
+
+  padding:
+    0
+    16px;
+
+  border-bottom:
+    1px solid
+    #dedfe2;
+
+  background:
+    #f6f6f7;
+
+  color:
+    #5c5e62;
+
+  font-size:
+    9px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.035em;
+
+  text-align:
+    left;
+
+  text-transform:
+    uppercase;
+
+  white-space:
+    nowrap;
+}
+
+.users-table__content td {
+  height: 63px;
+
+  padding:
+    0
+    16px;
+
+  border-bottom:
+    1px solid
+    #e7e7e8;
+
+  color:
+    #52545a;
+
+  font-size:
+    12px;
+
+  vertical-align:
+    middle;
+}
+
+.users-table__content
+  tbody
+  tr {
+  transition:
+    background
+      120ms ease;
+}
+
+.users-table__content
+  tbody
+  tr:hover {
+  background:
+    #fafafa;
+}
+
+.users-table__content
+  tbody
+  tr:last-child
+  td {
+  border-bottom:
+    none;
+}
+
+
+/* =========================================================
+   USER
+   ========================================================= */
+
+.users-table__user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.users-table__avatar {
+  display: flex;
+
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    #e3e4e6;
+
+  border-radius:
+    10px;
+
+  background:
+    #f5f5f6;
+
+  color:
+    #686a70;
+}
+
+.users-table__avatar--super {
+  border-color:
+    rgba(
+      235,
+      0,
+      41,
+      0.13
+    );
+
+  background:
+    rgba(
+      235,
+      0,
+      41,
+      0.065
+    );
+
+  color:
+    #eb0029;
+}
+
+.users-table__user-data {
+  min-width: 0;
+}
+
+.users-table__user-data
+  strong {
+  display: block;
+
+  overflow: hidden;
+
+  max-width: 260px;
+
+  color:
+    #303135;
+
+  font-size:
+    12px;
+
+  font-weight:
+    600;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+.users-table__user-data
+  span {
+  display: block;
+
+  margin-top: 2px;
+
+  color:
+    #95969a;
+
+  font-size:
+    9px;
+
+  font-weight:
+    500;
+}
+
+
+/* =========================================================
+   EMAIL
+   ========================================================= */
+
+.users-table__email {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.users-table__email
+  svg {
+  flex-shrink: 0;
+
+  color:
+    #96989d;
+}
+
+.users-table__email
+  span {
+  overflow: hidden;
+
+  max-width: 280px;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* =========================================================
+   ROLE
+   ========================================================= */
+
+.users-table__role {
+  display: inline-flex;
+
+  min-height: 24px;
+
+  align-items: center;
+
+  padding:
+    0
+    8px;
+
+  border-radius:
+    999px;
+
+  font-size:
+    9px;
+
+  font-weight:
+    700;
+
+  white-space:
+    nowrap;
+}
+
+.users-table__role--admin {
+  background:
+    #f0f0f1;
+
+  color:
+    #55575c;
+}
+
+.users-table__role--super {
+  background:
+    rgba(
+      235,
+      0,
+      41,
+      0.07
+    );
+
+  color:
+    #d60026;
+}
+
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+.users-table__date {
+  color:
+    #65676c;
+
+  white-space:
+    nowrap;
+}
+
+
+/* =========================================================
+   ACCESS
+   ========================================================= */
+
+.users-table__access {
+  display: flex;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   ACTION
+   ========================================================= */
+
+.users-table__action-heading,
+.users-table__action {
+  text-align:
+    right !important;
+}
+
+.users-table__edit {
+  display: inline-flex;
+
+  width: 34px;
+  height: 34px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border:
+    1px solid
+    #d9dadd;
+
+  border-radius:
+    8px;
+
+  background:
+    #ffffff;
+
+  color:
+    #5b5d62;
+
+  cursor:
+    pointer;
+
+  transition:
+    border-color
+      140ms ease,
+    background
+      140ms ease,
+    color
+      140ms ease;
+}
+
+.users-table__edit:hover {
+  border-color:
+    rgba(
+      235,
+      0,
+      41,
+      0.32
+    );
+
+  background:
+    rgba(
+      235,
+      0,
+      41,
+      0.045
+    );
+
+  color:
+    #eb0029;
+}
+
+.users-table__edit:focus-visible {
+  outline:
+    none;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      235,
+      0,
+      41,
+      0.1
+    );
+}
+
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.users-table__empty {
+  height:
+    150px !important;
+
+  text-align:
+    center !important;
+}
+
+.users-table__empty-content {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  color:
+    #8a8c91;
+}
+
+.users-table__empty-content
+  strong {
+  display: block;
+
+  color:
+    #55575c;
+
+  font-size:
+    11px;
+
+  font-weight:
+    700;
+}
+
+.users-table__empty-content
+  p {
+  margin:
+    3px
+    0
+    0;
+
+  color:
+    #8a8c91;
+
+  font-size:
+    9px;
+}
+
+
+/* =========================================================
+   DARK
+   ========================================================= */
+
+.dark
+  .users-table {
+  border-color:
+    #36383c;
+
+  background:
+    #222427;
+}
+
+.dark
+  .users-table__toolbar {
+  border-color:
+    #36383c;
+}
+
+.dark
+  .users-table__search-input {
+  border-color:
+    #414348;
+
+  background:
+    #292b2f;
+
+  color:
+    #f4f4f5;
+}
+
+.dark
+  .users-table__count {
+  border-color:
+    #414348;
+
+  background:
+    #292b2f;
+
+  color:
+    #afb0b4;
+}
+
+.dark
+  .users-table__count
+  strong {
+  color:
+    #f4f4f5;
+}
+
+.dark
+  .users-table__content
+  th {
+  border-color:
+    #36383c;
+
+  background:
+    #292b2f;
+
+  color:
+    #b3b5ba;
+}
+
+.dark
+  .users-table__content
+  td {
+  border-color:
+    #36383c;
+
+  color:
+    #d2d3d5;
+}
+
+.dark
+  .users-table__content
+  tbody
+  tr:hover {
+  background:
+    #292b2f;
+}
+
+.dark
+  .users-table__user-data
+  strong {
+  color:
+    #f4f4f5;
+}
+
+.dark
+  .users-table__avatar {
+  border-color:
+    #414348;
+
+  background:
+    #303236;
+
+  color:
+    #c2c3c7;
+}
+
+.dark
+  .users-table__role--admin {
+  background:
+    #303236;
+
+  color:
+    #e1e2e4;
+}
+
+.dark
+  .users-table__edit {
+  border-color:
+    #414348;
+
+  background:
+    #292b2f;
+
+  color:
+    #c4c5c8;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (
+  max-width: 767px
+) {
+  .users-table__toolbar {
+    align-items:
+      stretch;
+
+    flex-direction:
+      column;
+  }
+
+  .users-table__search {
+    max-width:
+      none;
+  }
+
+  .users-table__count {
+    align-self:
+      flex-start;
+  }
+}

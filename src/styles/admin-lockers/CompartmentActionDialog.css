@@ -1,0 +1,118 @@
+.compartment-action-dialog {
+  border-radius: 18px !important;
+}
+
+.compartment-action {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.compartment-action__door {
+  display: flex;
+  min-height: 116px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid #dddfe2;
+  border-radius: 14px;
+  background: #f8f8f9;
+  color: #4f5156;
+}
+
+.compartment-action__door--occupied {
+  border-color: #c7cdf7;
+  background: #f1f2ff;
+  color: #4b4f82;
+}
+
+.compartment-action__door--open {
+  border-color: #86d8bd;
+  background: #edfbf6;
+  color: #087e5d;
+}
+
+.compartment-action__door strong {
+  font-family: Poppins, sans-serif;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.compartment-action__door span {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.compartment-action__details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.compartment-action__details > div {
+  padding: 11px 12px;
+  border: 1px solid #e4e5e7;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.compartment-action__details span,
+.compartment-action__employee span {
+  display: block;
+  color: #85878c;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.compartment-action__details strong,
+.compartment-action__employee strong {
+  display: block;
+  margin-top: 2px;
+  color: #35363a;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.compartment-action__employee {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px;
+  border: 1px solid #e4e5e7;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.compartment-action__employee-icon {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: rgba(235, 0, 41, 0.07);
+  color: #eb0029;
+}
+
+.compartment-action__employee small {
+  display: block;
+  margin-top: 2px;
+  color: #8b8d92;
+  font-size: 9px;
+}
+
+.compartment-action__notice {
+  margin: 0;
+  color: #808287;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.compartment-action__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}

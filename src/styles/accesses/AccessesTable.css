@@ -1,0 +1,208 @@
+.accesses-table {
+  overflow: hidden;
+  border: 1px solid #dedfe2;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.035);
+}
+
+.accesses-table__toolbar {
+  display: flex;
+  min-height: 62px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 16px;
+  border-bottom: 1px solid #e2e3e5;
+}
+
+.accesses-table__search {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+}
+
+.accesses-table__search svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  color: #85878c;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.accesses-table__search input {
+  width: 100%;
+  height: 39px;
+  padding: 0 12px 0 37px;
+  border: 1px solid #d4d5d8;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: #2d2e32;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.accesses-table__search input:focus {
+  border-color: #eb0029;
+  box-shadow: 0 0 0 3px rgba(235, 0, 41, 0.07);
+}
+
+.accesses-table__total {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 10px;
+  border: 1px solid #e3e4e6;
+  border-radius: 8px;
+  background: #f7f7f8;
+  color: #85878c;
+  font-size: 10px;
+}
+
+.accesses-table__total strong {
+  color: #343539;
+}
+
+.accesses-table__scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.accesses-table__content {
+  width: 100%;
+  min-width: 1040px;
+  border-collapse: collapse;
+}
+
+.accesses-table__content th {
+  height: 42px;
+  padding: 0 16px;
+  border-bottom: 1px solid #dedfe2;
+  background: #f6f6f7;
+  color: #5c5e62;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.accesses-table__content td {
+  height: 58px;
+  padding: 0 16px;
+  border-bottom: 1px solid #e7e7e8;
+  color: #56585d;
+  font-size: 11px;
+}
+
+.accesses-table__content tbody tr:hover {
+  background: #fafafa;
+}
+
+.accesses-table__time {
+  color: #343539;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.accesses-table__movement {
+  display: inline-flex;
+  min-height: 26px;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.accesses-table__movement--entry {
+  background: #edf9f5;
+  color: #087e5d;
+}
+
+.accesses-table__movement--exit {
+  background: #f1f2f4;
+  color: #5e6167;
+}
+
+.accesses-table__locker,
+.accesses-table__compartment {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #f1f1f2;
+  color: #3f4146;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.accesses-table__empty {
+  height: 145px !important;
+  color: #85878c !important;
+  text-align: center !important;
+}
+
+.accesses-table__empty strong {
+  display: block;
+  color: #55575c;
+}
+
+.accesses-table__empty p {
+  margin: 4px 0 0;
+  font-size: 10px;
+}
+
+@media (max-width: 767px) {
+  .accesses-table__toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .accesses-table__search {
+    max-width: none;
+  }
+
+  .accesses-table__total {
+    width: fit-content;
+  }
+}
+
+/* =========================================================
+   DAILY SCHEDULE
+   ========================================================= */
+
+.accesses-table__schedule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.accesses-table__schedule-range {
+  color: #292a2e;
+  font-size: 11px;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.accesses-table__schedule-status {
+  display: inline-flex;
+  min-height: 22px;
+  align-items: center;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: #edf9f5;
+  color: #087e5d;
+  font-size: 8px;
+  font-weight: 750;
+}
+
+.dark .accesses-table__schedule-range {
+  color: #f4f4f5;
+}

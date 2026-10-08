@@ -1,0 +1,479 @@
+/* =========================================================
+   BULK IMPORT DIALOG
+   ========================================================= */
+
+.bulk-import-dialog {
+  overflow: hidden !important;
+
+  border-radius: 20px !important;
+}
+
+.bulk-import {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+/* =========================================================
+   FILE
+   ========================================================= */
+
+.bulk-import__hidden-input {
+  display: none;
+}
+
+.bulk-import__file-card {
+  display: flex;
+
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px;
+
+  border: 1px dashed #d6d7da;
+  border-radius: 13px;
+
+  background: #fafafa;
+
+  transition:
+    border-color 140ms ease,
+    background 140ms ease;
+}
+
+.bulk-import__file-card--dragging {
+  border-color: #eb0029;
+
+  background:
+    rgba(235, 0, 41, 0.035);
+}
+
+.bulk-import__file-icon {
+  display: flex;
+
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background:
+    rgba(235, 0, 41, 0.07);
+
+  color: #eb0029;
+}
+
+.bulk-import__file-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.bulk-import__file-content strong {
+  display: block;
+
+  overflow: hidden;
+
+  color: #292a2e;
+
+  font-size: 12px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bulk-import__file-content p {
+  margin: 3px 0 0;
+
+  color: #85878c;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.bulk-import__summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+
+  gap: 8px;
+}
+
+.bulk-import__summary-card {
+  padding: 11px;
+
+  border: 1px solid #e2e3e5;
+  border-radius: 10px;
+
+  background: #fafafa;
+}
+
+.bulk-import__summary-card span {
+  display: block;
+
+  color: #818389;
+
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.bulk-import__summary-card strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #292a2e;
+
+  font-size: 18px;
+}
+
+.bulk-import__summary-card--success {
+  background:
+    rgba(5, 150, 105, 0.04);
+}
+
+.bulk-import__summary-card--success strong {
+  color: #087e5d;
+}
+
+.bulk-import__summary-card--warning {
+  background:
+    rgba(217, 119, 6, 0.045);
+}
+
+.bulk-import__summary-card--warning strong {
+  color: #ad5904;
+}
+
+
+/* =========================================================
+   CAPACITY
+   ========================================================= */
+
+.bulk-import__capacity {
+  padding: 11px 12px;
+
+  border: 1px solid #e3e4e6;
+  border-radius: 10px;
+
+  background: #fafafa;
+}
+
+.bulk-import__capacity-heading {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 7px;
+
+  color: #6c6e73;
+
+  font-size: 9px;
+}
+
+.bulk-import__capacity-heading > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bulk-import__capacity-heading strong {
+  color: #4b4d52;
+}
+
+.bulk-import__capacity-track {
+  width: 100%;
+  height: 6px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #e5e6e8;
+}
+
+.bulk-import__capacity-value {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #059669;
+
+  transition: width 200ms ease;
+}
+
+.bulk-import__capacity-value--danger {
+  background: #eb0029;
+}
+
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.bulk-import__message {
+  display: flex;
+
+  align-items: flex-start;
+  gap: 9px;
+
+  padding: 10px 12px;
+
+  border-radius: 10px;
+
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.bulk-import__message svg {
+  margin-top: 1px;
+
+  flex-shrink: 0;
+}
+
+.bulk-import__message strong {
+  display: block;
+
+  font-size: 10px;
+}
+
+.bulk-import__message p {
+  margin: 2px 0 0;
+}
+
+.bulk-import__message--success {
+  border:
+    1px solid
+    rgba(5, 150, 105, 0.16);
+
+  background:
+    rgba(5, 150, 105, 0.055);
+
+  color: #087e5d;
+}
+
+.bulk-import__message--warning {
+  border:
+    1px solid
+    rgba(217, 119, 6, 0.17);
+
+  background:
+    rgba(217, 119, 6, 0.055);
+
+  color: #985006;
+}
+
+.bulk-import__message--error {
+  border:
+    1px solid
+    rgba(235, 0, 41, 0.18);
+
+  background:
+    rgba(235, 0, 41, 0.05);
+
+  color: #b60020;
+}
+
+
+/* =========================================================
+   TABS
+   ========================================================= */
+
+.bulk-import__tabs {
+  display: flex;
+
+  align-items: center;
+  gap: 4px;
+
+  overflow-x: auto;
+
+  padding-bottom: 1px;
+
+  border-bottom: 1px solid #e4e5e7;
+}
+
+.bulk-import__tab {
+  display: inline-flex;
+
+  min-height: 35px;
+
+  align-items: center;
+  gap: 7px;
+
+  padding: 0 10px;
+
+  border: 0;
+  border-bottom: 2px solid transparent;
+
+  background: transparent;
+  color: #77797e;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.bulk-import__tab span {
+  display: inline-flex;
+
+  min-width: 19px;
+  height: 19px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 5px;
+
+  border-radius: 999px;
+
+  background: #eeeeef;
+
+  font-size: 8px;
+}
+
+.bulk-import__tab:hover {
+  color: #292a2e;
+}
+
+.bulk-import__tab--active {
+  border-bottom-color: #eb0029;
+
+  color: #d60026;
+}
+
+.bulk-import__tab--active span {
+  background:
+    rgba(235, 0, 41, 0.08);
+
+  color: #d60026;
+}
+
+
+/* =========================================================
+   COMPLETE
+   ========================================================= */
+
+.bulk-import__complete {
+  display: flex;
+
+  min-height: 180px;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.bulk-import__complete-icon {
+  display: flex;
+
+  width: 52px;
+  height: 52px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 10px;
+
+  border-radius: 15px;
+
+  background:
+    rgba(5, 150, 105, 0.08);
+
+  color: #059669;
+}
+
+.bulk-import__complete strong {
+  color: #292a2e;
+
+  font-size: 13px;
+}
+
+.bulk-import__complete p {
+  margin: 4px 0 0;
+
+  color: #818389;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   NOTE
+   ========================================================= */
+
+.bulk-import__balance-note {
+  display: flex;
+
+  align-items: center;
+  gap: 7px;
+
+  color: #85878c;
+
+  font-size: 9px;
+}
+
+.bulk-import__balance-note svg {
+  color: #eb0029;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.bulk-import__footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 8px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 720px) {
+  .bulk-import__file-card {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .bulk-import__summary {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+  .bulk-import__footer {
+    width: 100%;
+  }
+
+  .bulk-import__footer > button {
+    flex: 1;
+  }
+}

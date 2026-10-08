@@ -1,0 +1,215 @@
+.employee-access-tabs {
+  overflow: hidden;
+
+  border:
+    1px solid
+    #dedfe2;
+
+  border-radius:
+    16px;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 1px 2px
+      rgba(15, 23, 42, 0.025),
+    0 4px 14px
+      rgba(15, 23, 42, 0.025);
+}
+
+.employee-access-tabs__header {
+  display: flex;
+
+  min-height:
+    66px;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    16px;
+
+  padding:
+    13px
+    16px;
+}
+
+.employee-access-tabs__header h2 {
+  margin: 0;
+
+  color:
+    #292a2e;
+
+  font-size:
+    14px;
+
+  font-weight:
+    700;
+}
+
+.employee-access-tabs__header p {
+  margin:
+    3px
+    0
+    0;
+
+  color:
+    #85878c;
+
+  font-size:
+    9px;
+}
+
+.employee-access-tabs__navigation {
+  display: flex;
+
+  align-items:
+    center;
+
+  gap:
+    2px;
+
+  min-height:
+    46px;
+
+  padding:
+    0
+    14px;
+
+  border-top:
+    1px solid
+    #eeeeef;
+
+  border-bottom:
+    1px solid
+    #dedfe2;
+
+  background:
+    #fafafa;
+}
+
+.employee-access-tabs__tab {
+  position:
+    relative;
+
+  display:
+    inline-flex;
+
+  min-height:
+    46px;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+
+  padding:
+    0
+    13px;
+
+  border:
+    0;
+
+  background:
+    transparent;
+
+  color:
+    #74767b;
+
+  font-family:
+    inherit;
+
+  font-size:
+    10px;
+
+  font-weight:
+    600;
+
+  cursor:
+    pointer;
+}
+
+.employee-access-tabs__tab::after {
+  position:
+    absolute;
+
+  right:
+    9px;
+
+  bottom:
+    -1px;
+
+  left:
+    9px;
+
+  height:
+    2px;
+
+  border-radius:
+    999px
+    999px
+    0
+    0;
+
+  background:
+    transparent;
+
+  content:
+    "";
+}
+
+.employee-access-tabs__tab--active {
+  color:
+    #d60026;
+}
+
+.employee-access-tabs__tab--active::after {
+  background:
+    #eb0029;
+}
+
+.employee-access-tabs__tab strong {
+  display:
+    inline-flex;
+
+  min-width:
+    20px;
+
+  height:
+    20px;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  padding:
+    0
+    5px;
+
+  border-radius:
+    999px;
+
+  background:
+    #eeeeef;
+
+  color:
+    #77797e;
+
+  font-size:
+    8px;
+}
+
+.employee-access-tabs__tab--active strong {
+  background:
+    rgba(235, 0, 41, 0.08);
+
+  color:
+    #d60026;
+}

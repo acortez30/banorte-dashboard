@@ -1,0 +1,380 @@
+/* =========================================================
+   BANORTE — ACCESSES PAGE
+   ========================================================= */
+
+.accesses-page {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  animation:
+    fade-in
+    180ms ease;
+}
+
+
+/* =========================================================
+   DATE TOOLBAR
+   ========================================================= */
+
+.accesses-page__date-toolbar {
+  display: flex;
+
+  min-height: 74px;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding:
+    13px
+    15px;
+
+  border:
+    1px solid
+    #dedfe2;
+
+  border-radius:
+    14px;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 2px 6px
+      rgba(
+        15,
+        23,
+        42,
+        0.035
+      );
+}
+
+
+/* =========================================================
+   DATE SUMMARY
+   ========================================================= */
+
+.accesses-page__date-summary {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  min-width: 0;
+}
+
+
+.accesses-page__date-summary > div {
+  display: flex;
+
+  min-width: 0;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 2px;
+}
+
+
+.accesses-page__date-summary strong {
+  color:
+    #292a2e;
+
+  font-size:
+    12px;
+
+  font-weight:
+    700;
+
+  text-transform:
+    capitalize;
+}
+
+
+.accesses-page__date-summary small {
+  color:
+    #94969b;
+
+  font-size:
+    8px;
+}
+
+
+/* =========================================================
+   DATE BADGE
+   ========================================================= */
+
+.accesses-page__date-badge {
+  display: inline-flex;
+
+  height: 25px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    0
+    9px;
+
+  border-radius:
+    999px;
+
+  background:
+    #f2f2f3;
+
+  color:
+    #72747a;
+
+  font-size:
+    8px;
+
+  font-weight:
+    700;
+}
+
+
+.accesses-page__date-badge--today {
+  background:
+    rgba(
+      235,
+      0,
+      41,
+      0.07
+    );
+
+  color:
+    #d60026;
+}
+
+
+/* =========================================================
+   METRICS
+   ========================================================= */
+
+.accesses-page__metrics {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap:
+    10px;
+}
+
+
+/* =========================================================
+   METRIC
+   ========================================================= */
+
+.accesses-page__metric {
+  display: flex;
+
+  min-height:
+    66px;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding:
+    11px
+    13px;
+
+  border:
+    1px solid
+    #dedfe2;
+
+  border-radius:
+    12px;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 2px 5px
+      rgba(
+        15,
+        23,
+        42,
+        0.03
+      );
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.accesses-page__metric-icon {
+  display: flex;
+
+  width:
+    37px;
+
+  height:
+    37px;
+
+  flex-shrink: 0;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    10px;
+
+  background:
+    #f3f3f4;
+
+  color:
+    #686a70;
+}
+
+
+.accesses-page__metric-icon--entry {
+  background:
+    #edf9f5;
+
+  color:
+    #059669;
+}
+
+
+.accesses-page__metric-icon--exit {
+  background:
+    #f3f3f4;
+
+  color:
+    #66686d;
+}
+
+
+/* =========================================================
+   METRIC COPY
+   ========================================================= */
+
+.accesses-page__metric-copy {
+  display: flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    1px;
+}
+
+
+.accesses-page__metric-copy span {
+  color:
+    #8b8d92;
+
+  font-size:
+    8px;
+
+  font-weight:
+    750;
+
+  letter-spacing:
+    0.06em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.accesses-page__metric-copy strong {
+  color:
+    #17181b;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size:
+    19px;
+
+  font-weight:
+    750;
+
+  line-height:
+    1.15;
+}
+
+
+/* =========================================================
+   DARK
+   ========================================================= */
+
+.dark
+  .accesses-page__date-toolbar,
+.dark
+  .accesses-page__metric {
+  border-color:
+    #383a3e;
+
+  background:
+    #25272a;
+}
+
+
+.dark
+  .accesses-page__date-summary strong,
+.dark
+  .accesses-page__metric-copy strong {
+  color:
+    #f4f4f5;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (
+  max-width: 900px
+) {
+  .accesses-page__date-toolbar {
+    align-items:
+      stretch;
+
+    flex-direction:
+      column;
+  }
+
+
+  .accesses-page__date-summary {
+    justify-content:
+      flex-start;
+  }
+
+
+  .accesses-page__date-summary > div {
+    align-items:
+      flex-start;
+  }
+
+
+  .accesses-page__metrics {
+    grid-template-columns:
+      1fr;
+  }
+}

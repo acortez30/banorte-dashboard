@@ -1,0 +1,16 @@
+export const typography = {
+  pageTitle: "text-xl font-bold font-poppins",
+  sectionTitle: "text-base font-semibold font-poppins",
+  sheetTitle: "text-lg font-bold font-poppins",
+  cardTitle: "text-sm font-semibold font-inter",
+  body: "text-sm font-normal font-inter",
+  bodySmall: "text-xs font-normal font-inter",
+  label: "text-sm font-medium font-inter",
+  caption: "text-xs font-normal font-inter",
+  categoryLabel: "text-xs font-semibold uppercase tracking-wide font-poppins",
+  badge: "text-xs font-medium font-inter",
+  buttonText: "text-sm font-semibold font-inter",
+  micro: "text-[11px] font-normal font-inter",
+  inputLabel: "text-xs font-medium font-inter text-muted-foreground",
+  helperText: "text-xs font-normal font-inter text-muted-foreground",
+} as const;

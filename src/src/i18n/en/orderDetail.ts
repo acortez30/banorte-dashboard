@@ -1,0 +1,160 @@
+export const orderDetail: Record<string, string> = {
+  // Order table headers
+  "orderTable.tracking": "Tracking No.",
+  "orderTable.locker": "Locker",
+  "orderTable.email": "Email",
+  "orderTable.door": "Door",
+  "orderTable.status": "Status",
+  "orderTable.receivedDate": "Received date",
+  "orderTable.withdrawnDate": "Picked up date",
+  "orderTable.generateQR": "Generate QR",
+  "orderTable.delivered": "Delivered",
+  "orderTable.inTransit": "In Transit",
+  "orderTable.processing": "Processing",
+  "orderTable.expired": "Expired",
+  "orderTable.scheduled": "Scheduled",
+  "orderTable.offeringType": "Transaction type",
+
+  // Order metrics
+  "orderMetrics.delivered": "Delivered",
+  "orderMetrics.collected": "Collected",
+  "orderMetrics.expired": "Expired",
+  "orderMetrics.scheduled": "Scheduled",
+
+  // Order status
+  "order.status.completed": "Completed",
+  "order.status.expired": "Expired",
+  "order.status.inLocker": "In locker",
+  "order.status.scheduled": "Scheduled",
+
+  // Order Details
+  "orderDetail.orders": "Packages",
+  "orderDetail.order": "Package",
+  "orderDetail.timeInLocker": "Time in Locker",
+  "orderDetail.lockerSize": "Locker Size",
+  "orderDetail.door": "Door",
+  "orderDetail.serviceType": "Service Type",
+  "orderDetail.clientAndOrder": "Client and Order",
+  "orderDetail.generateQR": "Generate QR",
+  "orderDetail.trackingNumber": "Tracking number",
+  "orderDetail.clientName": "Client name",
+  "orderDetail.email": "Email",
+  "orderDetail.phone": "Phone",
+  "orderDetail.notifications": "Notifications",
+  "orderDetail.registrationDate": "Registration date",
+  "orderDetail.collectionDate": "Collection date",
+  "orderDetail.expirationDate": "Expiration date",
+  "orderDetail.orderHistory": "Order history",
+  "orderDetail.transactionHistory": "Transaction history",
+  "orderDetail.rating": "Rating",
+  "orderDetail.deliveryEvidence": "Delivery evidence",
+  "orderDetail.dropoffPhoto": "Drop-off photo",
+  "orderDetail.pickupPhoto": "Pickup photo",
+  "orderDetail.evidenceVideo": "Evidence video",
+  "orderDetail.videoUnavailable": "Video unavailable",
+  "orderDetail.qrCode": "QR Code",
+  "orderDetail.qrNotAvaiable":
+    "The QR code is only available for expired orders or packages in locker",
+  "orderDetail.qrNotAvailable": "QR cannot be generated",
+  "orderDetail.scanToAccess": "Scan to access the details",
+  "orderDetail.download": "Download",
+  "orderDetail.print": "Print",
+  "orderDetail.channel": "Channel",
+  "orderDetail.status": "Status",
+  "orderDetail.type": "Type",
+  "orderDetail.sendDate": "Send date",
+  "orderDetail.schedule": "Scheduled",
+  "orderDetail.weekdays": "Weekday schedule",
+  "orderDetail.weekends": "Weekend schedule",
+  "orderDetail.description": "Description",
+  "orderDetail.locker": "Locker",
+  "orderDetail.maxSize": "Max size",
+  "orderDetail.directions": "Directions",
+  "orderDetail.completed": "Completed",
+  "orderDetail.expired": "Expired",
+  "orderDetail.delivered": "Delivered",
+  "orderDetail.returned": "Returned",
+  "orderDetail.inTransit": "In transit",
+  "orderDetail.canceledPicked": "Canceled picked up",
+  "orderDetail.inLocker": "In locker",
+  "orderDetail.processing": "Processing",
+  "orderDetail.qrDownloaded": "QR downloaded",
+  "orderDetail.received": "Received",
+  "orderDetail.noNotifications": "No notifications have been sent yet",
+
+  // Timeline / Audit titles
+  "orderDetail.title.SCHEDULE": "Scheduled",
+  "orderDetail.SCHEDULE": "Package scheduled in the locker",
+  "orderDetail.title.ASSIGNED": "Assigned",
+  "orderDetail.ASSIGNED": "Package assigned to a compartment",
+  "orderDetail.title.IN_LOCKER": "In locker",
+  "orderDetail.IN_LOCKER": "Package placed in locker",
+  "orderDetail.title.EXPIRED": "Expired",
+  "orderDetail.EXPIRED": "Package expired in locker",
+  "orderDetail.title.PICKUP_PACKAGE": "Collected",
+  "orderDetail.PICKUP_PACKAGE": "Package collected from locker",
+  "orderDetail.title.REVIEWED": "Package reviewed",
+  "orderDetail.title.CANCELED_UNUSED": "Canceled unused",
+
+  "orderDetail.title.PACKAGE_DELIVERY_FAILED": "Delivery attempt",
+  "orderDetail.PACKAGE_DELIVERY_FAILED":
+    "An attempt was made to deliver the package to the locker, but the operation failed. This may be because the compartment was not available, a system error occurred, or the locker had a failure.",
+
+  "orderDetail.title.REFUND": "Refund processed",
+  "orderDetail.REFUND": "The payment has been successfully refunded.",
+  "orderDetail.title.RETURNED": "Refund processed",
+  "orderDetail.RETURNED": "The payment has been successfully refunded.",
+
+  "orderDetail.title.PACKAGE_CANCELLED_BY_CARRIER":
+    "Package canceled by carrier",
+  "orderDetail.PACKAGE_CANCELLED_BY_CARRIER":
+    "The carrier canceled the shipment before delivery.",
+
+  // Order Evidence
+  "orderEvidence.title": "Delivery evidence",
+  "orderEvidence.dropoffPhoto": "Drop-off photo",
+  "orderEvidence.pickupPhoto": "Pickup photo",
+  "orderEvidence.videoSurveillance": "Video surveillance",
+  "orderEvidence.deliveryVideos": "Delivery videos",
+  "orderEvidence.pickupVideos": "Pickup videos",
+  "orderEvidence.clip": "Clip",
+  "orderEvidence.viewEvidence": "View evidence",
+  "orderEvidence.noRecords": "No records",
+  "orderEvidence.loadingStream": "Loading stream...",
+  "orderEvidence.sensor": "Sensor",
+  "orderEvidence.door": "Door",
+  "orderEvidence.time": "Time",
+  "orderEvidence.noVideo": "No video available",
+  "orderEvidence.recordingsDescription":
+    "Videos linked directly to the package, grouped by locker and operation.",
+  "orderEvidence.recording": "video",
+  "orderEvidence.recordings": "videos",
+  "orderEvidence.refresh": "Refresh",
+  "orderEvidence.loadingVideos": "Loading videos...",
+  "orderEvidence.loadError": "Videos could not be loaded",
+  "orderEvidence.retry": "Retry",
+  "orderEvidence.missingPackageId":
+    "The package could not be identified to retrieve its videos.",
+  "orderEvidence.noPackageVideos":
+    "This package does not have any available videos yet.",
+  "orderEvidence.onlyFinishedVideos":
+    "Only events that have finished recording are shown.",
+  "orderEvidence.locker": "Locker",
+  "orderEvidence.origin": "Origin / drop-off",
+  "orderEvidence.destination": "Destination / pickup",
+  "orderEvidence.camera": "Camera",
+  "orderEvidence.event": "Event",
+  "orderEvidence.downloadVideo": "Download video",
+  "orderEvidence.videoPlaybackError":
+    "The video could not be played. Verify that your session is still active or try downloading it.",
+
+
+  "orderDetail.tooltips.timeInLocker":
+    "Time elapsed since the package was registered until its collection. If it is still in the locker, the counter updates in real time.",
+  "orderDetail.tooltips.lockerSize":
+    "Size of the compartment assigned to the package. If multiple compartments are used, all involved sizes are displayed.",
+  "orderDetail.tooltips.door":
+    "Locker door assigned to the package. If multiple compartments are used, all involved doors are displayed.",
+  "orderDetail.tooltips.serviceType":
+    "Type of service used for the package. If multiple services are used, all involved services are displayed.",
+};

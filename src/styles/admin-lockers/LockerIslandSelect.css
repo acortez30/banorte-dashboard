@@ -1,0 +1,126 @@
+.locker-island-select {
+  position: relative;
+  width: min(100%, 330px);
+}
+
+.locker-island-select__trigger {
+  display: flex;
+  width: 100%;
+  min-height: 46px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 12px;
+  border: 1px solid #d8d9dc;
+  border-radius: 10px;
+  background: #fff;
+  color: #2d2e32;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 140ms ease, box-shadow 140ms ease, background 140ms ease;
+}
+
+.locker-island-select__trigger:hover {
+  border-color: #babcc0;
+  background: #fafafa;
+}
+
+.locker-island-select--open .locker-island-select__trigger {
+  border-color: #eb0029;
+  box-shadow: 0 0 0 3px rgba(235, 0, 41, 0.07);
+}
+
+.locker-island-select__trigger-main {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 9px;
+}
+
+.locker-island-select__trigger-main > svg {
+  flex-shrink: 0;
+  color: #eb0029;
+}
+
+.locker-island-select__trigger-main > span {
+  min-width: 0;
+}
+
+.locker-island-select__trigger strong,
+.locker-island-select__option strong {
+  display: block;
+  overflow: hidden;
+  color: #303135;
+  font-size: 12px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.locker-island-select__trigger small,
+.locker-island-select__option small {
+  display: block;
+  overflow: hidden;
+  margin-top: 2px;
+  color: #85878c;
+  font-size: 9px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.locker-island-select__chevron {
+  flex-shrink: 0;
+  color: #74767b;
+  transition: transform 150ms ease;
+}
+
+.locker-island-select--open .locker-island-select__chevron {
+  transform: rotate(180deg);
+}
+
+.locker-island-select__menu {
+  position: absolute;
+  z-index: 180;
+  top: calc(100% + 7px);
+  right: 0;
+  left: 0;
+  max-height: 280px;
+  overflow-y: auto;
+  padding: 5px;
+  border: 1px solid #dedfe2;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.13), 0 4px 10px rgba(15, 23, 42, 0.05);
+}
+
+.locker-island-select__option {
+  display: flex;
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #55575c;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.locker-island-select__option:hover {
+  background: #f6f6f7;
+}
+
+.locker-island-select__option--selected {
+  background: rgba(235, 0, 41, 0.055);
+  color: #eb0029;
+}
+
+.locker-island-select__option > span {
+  min-width: 0;
+}

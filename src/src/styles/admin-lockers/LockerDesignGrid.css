@@ -1,0 +1,103 @@
+.locker-design {
+  overflow: hidden;
+  border: 1px solid #e0e1e3;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.locker-design__scroll {
+  width: 100%;
+  overflow-x: auto;
+  padding: 22px 20px 24px;
+}
+
+.locker-design__board {
+  width: max-content;
+  min-width: 100%;
+}
+
+.locker-design__columns,
+.locker-design__grid {
+  display: grid;
+  grid-template-columns: repeat(19, 68px);
+  gap: 4px;
+}
+
+.locker-design__columns {
+  margin-bottom: 7px;
+}
+
+.locker-design__columns span {
+  color: #44464b;
+  font-size: 10px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.locker-design__door {
+  position: relative;
+  display: flex;
+  height: 58px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  padding: 0;
+  border: 1px solid #d9dade;
+  border-radius: 6px;
+  background: #f8f8f9;
+  color: #4d4f54;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 120ms ease, border-color 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+
+.locker-design__door:hover {
+  z-index: 1;
+  transform: translateY(-1px);
+  border-color: #aeb0b5;
+  box-shadow: 0 5px 12px rgba(15, 23, 42, 0.08);
+}
+
+.locker-design__door--occupied {
+  border-color: #c7cdf7;
+  background: #f1f2ff;
+  color: #4b4f82;
+}
+
+.locker-design__door--open {
+  border-color: #86d8bd;
+  background: #edfbf6;
+  color: #087e5d;
+}
+
+.locker-design__door--selected {
+  border-color: #eb0029;
+  box-shadow: 0 0 0 2px rgba(235, 0, 41, 0.12);
+}
+
+.locker-design__door-number {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.locker-design__door-size {
+  color: currentColor;
+  font-size: 8px;
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+.locker-design__door-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+@media (max-width: 768px) {
+  .locker-design__columns,
+  .locker-design__grid {
+    grid-template-columns: repeat(19, 62px);
+  }
+}

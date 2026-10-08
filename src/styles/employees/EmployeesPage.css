@@ -1,0 +1,40 @@
+/* =========================================================
+   BANORTE DASHBOARD — EMPLOYEES PAGE
+   ========================================================= */
+
+.employees-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.employees-page__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .employees-page {
+    gap: 16px;
+  }
+
+  .employees-page__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .employees-page__actions > button {
+    width: 100%;
+  }
+}

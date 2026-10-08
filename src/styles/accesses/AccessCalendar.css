@@ -1,0 +1,700 @@
+/* =========================================================
+   BANORTE — ACCESS CALENDAR
+   ========================================================= */
+
+.access-calendar {
+  position: relative;
+
+  width: 245px;
+}
+
+
+/* =========================================================
+   TRIGGER
+   ========================================================= */
+
+.access-calendar__trigger {
+  display: flex;
+
+  width: 100%;
+  height: 46px;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding:
+    0
+    12px;
+
+  border:
+    1px solid
+    #d9dade;
+
+  border-radius:
+    10px;
+
+  outline: none;
+
+  background:
+    #ffffff;
+
+  color:
+    #292a2e;
+
+  font-family:
+    inherit;
+
+  text-align:
+    left;
+
+  cursor: pointer;
+
+  transition:
+    border-color
+      140ms ease,
+    box-shadow
+      140ms ease,
+    background
+      140ms ease;
+}
+
+
+.access-calendar__trigger:hover {
+  border-color:
+    #c1c3c7;
+}
+
+
+.access-calendar--open
+  .access-calendar__trigger {
+  border-color:
+    #eb0029;
+
+  box-shadow:
+    0 0 0 3px
+      rgba(
+        235,
+        0,
+        41,
+        0.07
+      );
+}
+
+
+/* =========================================================
+   TRIGGER ICON
+   ========================================================= */
+
+.access-calendar__trigger-icon {
+  display: flex;
+
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius:
+    8px;
+
+  background:
+    #f4f4f5;
+
+  color:
+    #686a70;
+}
+
+
+/* =========================================================
+   TRIGGER COPY
+   ========================================================= */
+
+.access-calendar__trigger-copy {
+  display: flex;
+
+  min-width: 0;
+
+  flex: 1;
+
+  flex-direction: column;
+
+  gap: 1px;
+}
+
+
+.access-calendar__trigger-copy small {
+  color:
+    #8a8c91;
+
+  font-size:
+    8px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.06em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.access-calendar__trigger-copy strong {
+  overflow:
+    hidden;
+
+  color:
+    #292a2e;
+
+  font-size:
+    12px;
+
+  font-weight:
+    700;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+.access-calendar__trigger-chevron {
+  flex-shrink:
+    0;
+
+  color:
+    #7f8186;
+
+  transition:
+    transform
+      150ms ease;
+}
+
+
+.access-calendar--open
+  .access-calendar__trigger-chevron {
+  transform:
+    rotate(
+      180deg
+    );
+}
+
+
+/* =========================================================
+   POPOVER
+   ========================================================= */
+
+.access-calendar__popover {
+  position:
+    absolute;
+
+  z-index:
+    300;
+
+  top:
+    calc(
+      100% + 8px
+    );
+
+  left:
+    0;
+
+  width:
+    296px;
+
+  padding:
+    12px;
+
+  border:
+    1px solid
+    #dddddf;
+
+  border-radius:
+    14px;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 16px 38px
+      rgba(
+        15,
+        23,
+        42,
+        0.15
+      ),
+    0 4px 10px
+      rgba(
+        15,
+        23,
+        42,
+        0.05
+      );
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.access-calendar__header {
+  display: flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    12px;
+
+  padding:
+    2px
+    2px
+    11px;
+
+  border-bottom:
+    1px solid
+    #eeeeef;
+}
+
+
+.access-calendar__header > div:first-child {
+  display: flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    2px;
+}
+
+
+.access-calendar__header span {
+  color:
+    #96989d;
+
+  font-size:
+    8px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.05em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.access-calendar__header strong {
+  color:
+    #292a2e;
+
+  font-size:
+    13px;
+
+  font-weight:
+    750;
+
+  text-transform:
+    capitalize;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.access-calendar__navigation {
+  display: flex;
+
+  gap:
+    4px;
+}
+
+
+.access-calendar__navigation button {
+  display: flex;
+
+  width:
+    30px;
+
+  height:
+    30px;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border:
+    1px solid
+    #e1e2e5;
+
+  border-radius:
+    8px;
+
+  background:
+    #ffffff;
+
+  color:
+    #53555a;
+
+  cursor:
+    pointer;
+
+  transition:
+    background
+      130ms ease,
+    border-color
+      130ms ease;
+}
+
+
+.access-calendar__navigation button:hover:not(:disabled) {
+  border-color:
+    #c6c8cc;
+
+  background:
+    #f7f7f8;
+}
+
+
+.access-calendar__navigation button:disabled {
+  opacity:
+    0.3;
+
+  cursor:
+    default;
+}
+
+
+/* =========================================================
+   WEEK DAYS
+   ========================================================= */
+
+.access-calendar__week {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      7,
+      1fr
+    );
+
+  gap:
+    3px;
+
+  margin-top:
+    10px;
+}
+
+
+.access-calendar__week span {
+  display: flex;
+
+  height:
+    24px;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  color:
+    #9a9ca1;
+
+  font-size:
+    8px;
+
+  font-weight:
+    700;
+}
+
+
+/* =========================================================
+   DAYS
+   ========================================================= */
+
+.access-calendar__days {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      7,
+      1fr
+    );
+
+  gap:
+    3px;
+}
+
+
+.access-calendar__day {
+  position:
+    relative;
+
+  display: flex;
+
+  width:
+    100%;
+
+  aspect-ratio:
+    1;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border:
+    0;
+
+  border-radius:
+    8px;
+
+  background:
+    transparent;
+
+  color:
+    #45474b;
+
+  font-family:
+    inherit;
+
+  font-size:
+    10px;
+
+  font-weight:
+    600;
+
+  cursor:
+    pointer;
+
+  transition:
+    background
+      120ms ease,
+    color
+      120ms ease;
+}
+
+
+.access-calendar__day:hover:not(:disabled):not(
+    .access-calendar__day--selected
+  ) {
+  background:
+    #f3f3f4;
+}
+
+
+.access-calendar__day--outside {
+  color:
+    #c6c7ca;
+}
+
+
+.access-calendar__day--selected {
+  background:
+    #eb0029;
+
+  color:
+    #ffffff;
+
+  font-weight:
+    750;
+
+  box-shadow:
+    0 3px 8px
+      rgba(
+        235,
+        0,
+        41,
+        0.2
+      );
+}
+
+
+.access-calendar__day--today:not(
+    .access-calendar__day--selected
+  ) {
+  color:
+    #eb0029;
+
+  font-weight:
+    800;
+}
+
+
+.access-calendar__day--today:not(
+    .access-calendar__day--selected
+  )::after {
+  position:
+    absolute;
+
+  right:
+    50%;
+
+  bottom:
+    3px;
+
+  width:
+    3px;
+
+  height:
+    3px;
+
+  border-radius:
+    50%;
+
+  background:
+    #eb0029;
+
+  content:
+    "";
+
+  transform:
+    translateX(
+      50%
+    );
+}
+
+
+.access-calendar__day:disabled {
+  color:
+    #d6d7da;
+
+  cursor:
+    not-allowed;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.access-calendar__footer {
+  display: flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    12px;
+
+  margin-top:
+    10px;
+
+  padding:
+    10px
+    2px
+    1px;
+
+  border-top:
+    1px solid
+    #eeeeef;
+}
+
+
+.access-calendar__footer span {
+  color:
+    #999ba0;
+
+  font-size:
+    7.5px;
+}
+
+
+.access-calendar__footer button {
+  border:
+    0;
+
+  background:
+    transparent;
+
+  color:
+    #eb0029;
+
+  font-family:
+    inherit;
+
+  font-size:
+    9px;
+
+  font-weight:
+    750;
+
+  cursor:
+    pointer;
+}
+
+
+/* =========================================================
+   DARK
+   ========================================================= */
+
+.dark
+  .access-calendar__trigger,
+.dark
+  .access-calendar__popover {
+  border-color:
+    #414348;
+
+  background:
+    #292b2f;
+}
+
+
+.dark
+  .access-calendar__trigger-copy strong,
+.dark
+  .access-calendar__header strong {
+  color:
+    #f4f4f5;
+}
+
+
+.dark
+  .access-calendar__day {
+  color:
+    #e5e5e7;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 640px
+) {
+  .access-calendar {
+    width:
+      100%;
+  }
+
+
+  .access-calendar__popover {
+    width:
+      min(
+        296px,
+        calc(
+          100vw - 32px
+        )
+      );
+  }
+}

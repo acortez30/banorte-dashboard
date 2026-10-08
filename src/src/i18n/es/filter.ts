@@ -1,0 +1,16 @@
+export const filter: Record<string, string> = {
+  "filter.completed": "Completado",
+  "filter.canceled": "Cancelado",
+  "filter.expired": "Expirado",
+  "filter.in_locker": "En locker",
+  "filter.returned":"Devuelto",
+  "filter.canceled_picked":"Cancelado recogido",
+  "filter.scheduled":"Agendado",
+  "filter.in_transit":"En transito",
+  "filter.in_origin_locker":"En locker origen",
+  "filter.in_destination_locker":"En locker destino",
+  "filter.failure": "Falla",
+  "filter.pending_surcharge_payment": "Pago de recargo pendiente",
+  "filter.tracking":"Número de tracking",
+  "filter.email":"Correo",
+};

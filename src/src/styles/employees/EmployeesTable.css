@@ -1,0 +1,366 @@
+/* =========================================================
+   BANORTE DASHBOARD — EMPLOYEES TABLE
+   ========================================================= */
+
+.employees-table {
+  overflow: hidden;
+
+  border: 1px solid #dedfe2;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.025),
+    0 3px 10px rgba(15, 23, 42, 0.03);
+}
+
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.employees-table__toolbar {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 12px 16px;
+
+  border-bottom: 1px solid #e2e4e7;
+}
+
+.employees-table__search {
+  position: relative;
+
+  width: 100%;
+  max-width: 360px;
+}
+
+.employees-table__search-icon {
+  position: absolute;
+  z-index: 1;
+
+  top: 50%;
+  left: 12px;
+
+  color: #85868a;
+
+  pointer-events: none;
+
+  transform: translateY(-50%);
+}
+
+.employees-table__search-input,
+.employees-table__filter {
+  height: 38px;
+
+  border: 1px solid #d3d4d7;
+  border-radius: 5px;
+
+  outline: none;
+
+  background: #ffffff;
+  color: #252525;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.employees-table__search-input {
+  width: 100%;
+
+  padding: 0 12px 0 36px;
+}
+
+.employees-table__search-input::placeholder {
+  color: #929499;
+}
+
+.employees-table__filter {
+  width: 220px;
+
+  padding: 0 34px 0 12px;
+
+  cursor: pointer;
+}
+
+.employees-table__search-input:hover,
+.employees-table__filter:hover {
+  border-color: #b4b6ba;
+}
+
+.employees-table__search-input:focus,
+.employees-table__filter:focus {
+  border-color: #eb0029;
+
+  box-shadow:
+    0 0 0 2px rgba(235, 0, 41, 0.08);
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.employees-table__scroll {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.employees-table__content {
+  width: 100%;
+  min-width: 1050px;
+
+  border-collapse: collapse;
+}
+
+.employees-table__content th {
+  height: 40px;
+
+  padding: 0 16px;
+
+  border-bottom: 1px solid #dedfe2;
+
+  background: #f6f6f7;
+  color: #5c5e62;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.025em;
+
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.employees-table__content td {
+  height: 60px;
+
+  padding: 0 16px;
+
+  border-bottom: 1px solid #e5e5e6;
+
+  color: #52545a;
+
+  font-size: 13px;
+
+  vertical-align: middle;
+}
+
+.employees-table__content tbody tr {
+  transition: background 120ms ease;
+}
+
+.employees-table__content tbody tr:hover {
+  background: #fafafa;
+}
+
+.employees-table__content tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   EMPLOYEE DATA
+   ========================================================= */
+
+.employees-table__employee-name,
+.employees-table__employee-link {
+  color: #35363a;
+  font-weight: 600;
+}
+
+.employees-table__employee-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: color 140ms ease;
+}
+
+.employees-table__employee-link:hover {
+  color: #eb0029;
+}
+
+.employees-table__employee-link:focus-visible {
+  outline: 2px solid rgba(235, 0, 41, 0.22);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.employees-table__locker-badge {
+  display: inline-flex;
+
+  min-height: 24px;
+
+  align-items: center;
+
+  padding: 3px 9px;
+
+  border-radius: 5px;
+
+  background: #f0f0f1;
+  color: #35363a;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACTION
+   ========================================================= */
+
+.employees-table__action-heading {
+  text-align: right !important;
+}
+
+.employees-table__action-cell {
+  text-align: right;
+}
+
+.employees-table__edit {
+  display: inline-flex;
+
+  width: 34px;
+  height: 34px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #d9dadd;
+  border-radius: 5px;
+
+  background: #ffffff;
+  color: #5b5d62;
+
+  cursor: pointer;
+
+  transition:
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease;
+}
+
+.employees-table__edit:hover {
+  border-color: #eb0029;
+
+  background: #fff5f7;
+  color: #eb0029;
+}
+
+.employees-table__edit:focus-visible {
+  outline: 2px solid rgba(235, 0, 41, 0.3);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.employees-table__empty {
+  height: 140px !important;
+
+  color: #85868a !important;
+
+  text-align: center !important;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+.dark .employees-table {
+  border-color: #36383c;
+
+  background: #202225;
+}
+
+.dark .employees-table__toolbar {
+  border-color: #34363a;
+}
+
+.dark .employees-table__search-input,
+.dark .employees-table__filter {
+  border-color: #414348;
+
+  background: #25272a;
+  color: #f4f4f5;
+}
+
+.dark .employees-table__content th {
+  border-color: #34363a;
+
+  background: #292b2f;
+  color: #b3b5ba;
+}
+
+.dark .employees-table__content td {
+  border-color: #34363a;
+
+  color: #d2d3d5;
+}
+
+.dark .employees-table__content tbody tr:hover {
+  background: #27292c;
+}
+
+.dark .employees-table__employee-name,
+.dark .employees-table__employee-link {
+  color: #f4f4f5;
+}
+
+.dark .employees-table__locker-badge {
+  background: #303236;
+  color: #e4e4e7;
+}
+
+.dark .employees-table__edit {
+  border-color: #414348;
+
+  background: #292b2f;
+  color: #c4c5c8;
+}
+
+.dark .employees-table__edit:hover {
+  border-color: #eb0029;
+
+  background: rgba(235, 0, 41, 0.08);
+  color: #ff3558;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .employees-table__toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .employees-table__search {
+    max-width: none;
+  }
+
+  .employees-table__filter {
+    width: 100%;
+  }
+}

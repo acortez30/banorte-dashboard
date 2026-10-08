@@ -1,0 +1,332 @@
+/* =========================================================
+   BANORTE — LOCKER FILTER SELECT
+   ========================================================= */
+
+.locker-filter {
+  position: relative;
+
+  width: 220px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TRIGGER
+   ========================================================= */
+
+.locker-filter__trigger {
+  display: flex;
+
+  width: 100%;
+  height: 38px;
+
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  padding: 0 11px;
+
+  border: 1px solid #d4d5d8;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #2b2c30;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    border-color 140ms ease,
+    background 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.locker-filter__trigger:hover {
+  border-color: #bfc1c5;
+
+  background: #fafafa;
+}
+
+.locker-filter__trigger:focus-visible {
+  border-color: #eb0029;
+
+  outline: none;
+
+  box-shadow:
+    0 0 0 2px
+    rgba(235, 0, 41, 0.08);
+}
+
+.locker-filter--open
+  .locker-filter__trigger {
+  border-color: #eb0029;
+
+  box-shadow:
+    0 0 0 2px
+    rgba(235, 0, 41, 0.08);
+}
+
+.locker-filter__trigger-content {
+  display: flex;
+  min-width: 0;
+
+  align-items: center;
+  gap: 8px;
+}
+
+.locker-filter__trigger-icon {
+  flex-shrink: 0;
+
+  color: #77797e;
+}
+
+.locker-filter__trigger-label {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.locker-filter__chevron {
+  flex-shrink: 0;
+
+  color: #77797e;
+
+  transition:
+    transform 160ms ease;
+}
+
+.locker-filter--open
+  .locker-filter__chevron {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.locker-filter__menu {
+  position: absolute;
+  z-index: 150;
+
+  top: calc(100% + 6px);
+  right: 0;
+
+  width: 100%;
+  max-height: 270px;
+
+  overflow-y: auto;
+
+  padding: 5px;
+
+  border: 1px solid #dedfe2;
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 30px
+      rgba(15, 23, 42, 0.13),
+    0 3px 8px
+      rgba(15, 23, 42, 0.05);
+
+  animation:
+    locker-filter-open
+    130ms ease-out;
+}
+
+@keyframes locker-filter-open {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   OPTION
+   ========================================================= */
+
+.locker-filter__option {
+  display: flex;
+
+  width: 100%;
+  min-height: 38px;
+
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  padding: 0 9px;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: transparent;
+  color: #44464b;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 130ms ease,
+    color 130ms ease;
+}
+
+.locker-filter__option:hover {
+  background: #f5f5f6;
+
+  color: #1f2023;
+}
+
+.locker-filter__option--selected {
+  background:
+    rgba(235, 0, 41, 0.065);
+
+  color: #d60026;
+
+  font-weight: 700;
+}
+
+.locker-filter__option--selected:hover {
+  background:
+    rgba(235, 0, 41, 0.09);
+
+  color: #c60022;
+}
+
+.locker-filter__option-content {
+  display: flex;
+  min-width: 0;
+
+  align-items: center;
+  gap: 8px;
+}
+
+.locker-filter__option-content span {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.locker-filter__option-icon {
+  display: flex;
+
+  width: 25px;
+  height: 25px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+
+  background: #f1f1f2;
+
+  color: #6d6f74;
+}
+
+.locker-filter__option--selected
+  .locker-filter__option-icon {
+  background:
+    rgba(235, 0, 41, 0.08);
+
+  color: #eb0029;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.locker-filter__menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.locker-filter__menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.locker-filter__menu::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background: #d4d5d8;
+}
+
+
+/* =========================================================
+   DARK
+   ========================================================= */
+
+.dark .locker-filter__trigger {
+  border-color: #414348;
+
+  background: #292b2f;
+  color: #f4f4f5;
+}
+
+.dark .locker-filter__trigger:hover {
+  border-color: #53555a;
+
+  background: #303236;
+}
+
+.dark .locker-filter__menu {
+  border-color: #414348;
+
+  background: #292b2f;
+}
+
+.dark .locker-filter__option {
+  color: #e1e2e4;
+}
+
+.dark .locker-filter__option:hover {
+  background: #333539;
+}
+
+.dark
+  .locker-filter__option--selected {
+  background:
+    rgba(235, 0, 41, 0.12);
+
+  color: #ff5774;
+}
+
+.dark .locker-filter__option-icon {
+  background: #36383c;
+
+  color: #babcc0;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .locker-filter {
+    width: 100%;
+  }
+}

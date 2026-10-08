@@ -1,0 +1,295 @@
+/* =========================================================
+   BANORTE DASHBOARD — BUTTON
+   ========================================================= */
+
+.app-button {
+  display: inline-flex;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  user-select: none;
+
+  transition:
+    background 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease,
+    box-shadow 140ms ease,
+    transform 100ms ease;
+}
+
+
+/* =========================================================
+   SIZES
+   ========================================================= */
+
+.app-button--sm {
+  min-height: 32px;
+
+  padding: 0 11px;
+
+  font-size: 11px;
+}
+
+.app-button--md {
+  min-height: 38px;
+
+  padding: 0 14px;
+
+  font-size: 12px;
+}
+
+.app-button--lg {
+  min-height: 42px;
+
+  padding: 0 17px;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   PRIMARY
+   ========================================================= */
+
+.app-button--primary {
+  border-color: #eb0029;
+
+  background: #eb0029;
+  color: #ffffff;
+
+  box-shadow:
+    0 1px 2px rgba(235, 0, 41, 0.14);
+}
+
+.app-button--primary:hover:not(:disabled) {
+  border-color: #d60026;
+
+  background: #d60026;
+
+  box-shadow:
+    0 3px 8px rgba(235, 0, 41, 0.18);
+}
+
+.app-button--primary:active:not(:disabled) {
+  background: #c20022;
+
+  transform: translateY(1px);
+}
+
+
+/* =========================================================
+   SECONDARY
+   ========================================================= */
+
+.app-button--secondary {
+  border-color: #d7d8dc;
+
+  background: #ffffff;
+  color: #292a2e;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.025);
+}
+
+.app-button--secondary:hover:not(:disabled) {
+  border-color: #bfc1c5;
+
+  background: #f8f8f9;
+  color: #171719;
+}
+
+.app-button--secondary:active:not(:disabled) {
+  background: #f1f1f2;
+
+  transform: translateY(1px);
+}
+
+
+/* =========================================================
+   OUTLINE
+   ========================================================= */
+
+.app-button--outline {
+  border-color: rgba(235, 0, 41, 0.35);
+
+  background: transparent;
+  color: #d60026;
+}
+
+.app-button--outline:hover:not(:disabled) {
+  border-color: #eb0029;
+
+  background: rgba(235, 0, 41, 0.05);
+}
+
+
+/* =========================================================
+   GHOST
+   ========================================================= */
+
+.app-button--ghost {
+  border-color: transparent;
+
+  background: transparent;
+  color: #55575c;
+}
+
+.app-button--ghost:hover:not(:disabled) {
+  background: #f2f2f3;
+  color: #252629;
+}
+
+
+/* =========================================================
+   DANGER
+   ========================================================= */
+
+.app-button--danger {
+  border-color: #b91c1c;
+
+  background: #b91c1c;
+  color: #ffffff;
+}
+
+.app-button--danger:hover:not(:disabled) {
+  border-color: #991b1b;
+
+  background: #991b1b;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.app-button__icon {
+  flex-shrink: 0;
+}
+
+.app-button__label {
+  display: inline-flex;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   FULL WIDTH
+   ========================================================= */
+
+.app-button--full {
+  width: 100%;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.app-button:focus-visible {
+  box-shadow:
+    0 0 0 3px rgba(235, 0, 41, 0.12);
+}
+
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.app-button:disabled {
+  opacity: 0.52;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.app-button--loading {
+  cursor: wait;
+}
+
+.app-button__spinner {
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+
+  border-radius: 50%;
+
+  opacity: 0.75;
+
+  animation:
+    app-button-spin
+    700ms linear infinite;
+}
+
+@keyframes app-button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+.dark .app-button--secondary {
+  border-color: #414348;
+
+  background: #292b2f;
+  color: #f4f4f5;
+}
+
+.dark
+  .app-button--secondary:hover:not(:disabled) {
+  border-color: #53555a;
+
+  background: #303236;
+}
+
+.dark .app-button--ghost {
+  color: #d1d2d5;
+}
+
+.dark
+  .app-button--ghost:hover:not(:disabled) {
+  background: #303236;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .app-button--md {
+    min-height: 40px;
+  }
+}

@@ -1,0 +1,252 @@
+/* =========================================================
+   CENTRAL MODULE
+   Same physical dimensions as every other module
+   ========================================================= */
+
+.locker-central-module {
+  flex:
+    0 0
+    auto;
+
+  padding: 5px;
+
+  border:
+    1px solid
+    #cfd1d5;
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f7f8f9,
+      #f1f2f3
+    );
+
+  box-shadow:
+    0 2px 5px
+      rgba(
+        15,
+        23,
+        42,
+        0.035
+      );
+}
+
+
+/* =========================================================
+   BODY
+
+   Same grid as a standard module.
+   ========================================================= */
+
+.locker-central-module__body {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      102px
+    );
+
+  gap: 4px;
+}
+
+
+.locker-central-module__column {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+/* =========================================================
+   SCREEN DOOR
+   ========================================================= */
+
+.locker-central-module__door-wrapper {
+  position: relative;
+
+  width: 102px;
+  height: 70px;
+}
+
+
+/*
+ * The real compartment remains underneath.
+ *
+ * The screen is simply mounted on its front.
+ */
+.locker-central-module__door-wrapper
+  > .locker-design__door {
+  position: absolute;
+
+  inset: 0;
+}
+
+
+/* =========================================================
+   SCREEN
+   ========================================================= */
+
+.locker-central-module__screen {
+  position: absolute;
+
+  z-index: 4;
+
+  inset:
+    6px
+    7px;
+
+  display: flex;
+
+  overflow: hidden;
+
+  flex-direction: column;
+
+  border:
+    2px solid
+    #303237;
+
+  border-radius: 4px;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 3px 8px
+      rgba(
+        15,
+        23,
+        42,
+        0.18
+      );
+
+  /*
+   * The screen should not block
+   * compartment selection.
+   */
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SCREEN HEADER
+   ========================================================= */
+
+.locker-central-module__screen-header {
+  display: flex;
+
+  height: 16px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding:
+    0
+    5px;
+
+  background:
+    #eb0029;
+
+  color:
+    #ffffff;
+}
+
+
+.locker-central-module__screen-header strong {
+  font-size: 5px;
+
+  font-weight: 800;
+
+  letter-spacing:
+    0.05em;
+}
+
+
+.locker-central-module__screen-header span {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 3px;
+}
+
+
+.locker-central-module__screen-header i {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background:
+    #8ce8c6;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.locker-central-module__screen-content {
+  display: flex;
+
+  min-height: 0;
+
+  flex: 1;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  color:
+    #eb0029;
+}
+
+
+.locker-central-module__screen-content strong {
+  margin-top: 1px;
+
+  color:
+    #303135;
+
+  font-size: 5.5px;
+
+  font-weight: 750;
+}
+
+
+.locker-central-module__screen-content span {
+  color:
+    #92949a;
+
+  font-size: 4.5px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (
+  max-width: 1400px
+) {
+  .locker-central-module__body {
+    grid-template-columns:
+      repeat(
+        2,
+        92px
+      );
+  }
+
+
+  .locker-central-module__door-wrapper {
+    width: 92px;
+    height: 66px;
+  }
+}

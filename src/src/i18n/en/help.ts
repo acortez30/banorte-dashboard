@@ -1,0 +1,41 @@
+export const help: Record<string, string> = {
+  "help.title": "Help",
+  "help.subtitle": "Help and support center for administrators",
+  "help.email": "Email",
+  "help.phone": "Phone",
+  "help.liveChat": "Live Chat",
+  "help.liveChatDesc": "Available during business hours",
+  "help.hours": "Business Hours",
+  "help.hoursValue": "Mon - Fri, 9:00 AM - 6:00 PM",
+  "help.faq": "Frequently Asked Questions",
+
+  "help.contact.title": "Contact Droppi",
+  "help.contact.subtitle":
+    "Send us your information and our team will get in touch with you.",
+  "help.contact.name": "First name",
+  "help.contact.surname": "Last name",
+  "help.contact.email": "Email",
+  "help.contact.company": "Company",
+  "help.contact.companyOptional": "Company (optional)",
+  "help.contact.howHear": "How did you hear about us?",
+  "help.contact.message": "Message",
+  "help.contact.messageOptional": "Message (optional)",
+  "help.contact.namePlaceholder": "Your first name",
+  "help.contact.surnamePlaceholder": "Your last name",
+  "help.contact.emailPlaceholder": "name@company.com",
+  "help.contact.companyPlaceholder": "Company name",
+  "help.contact.howHearPlaceholder": "E.g. Google, Instagram, referral...",
+  "help.contact.messagePlaceholder": "Tell us how we can help",
+  "help.contact.send": "Send request",
+  "help.contact.sending": "Sending...",
+  "help.contact.success": "Request sent successfully.",
+  "help.contact.successDescription":
+    "Our team received your information and can get in touch with you.",
+  "help.contact.error": "The request could not be sent.",
+  "help.contact.required": "Complete all required fields.",
+  "help.contact.invalidEmail": "Enter a valid email address.",
+  "help.contact.howHearMin":
+    "Tell us how you heard about us using at least 2 characters.",
+  "help.contact.rateLimit":
+    "For security, the service allows up to 5 requests every 2 minutes per IP.",
+};

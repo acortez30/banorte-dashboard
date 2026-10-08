@@ -1,0 +1,26 @@
+/* =========================================================
+   BANORTE DASHBOARD — EMPLOYEES METRICS
+   ========================================================= */
+
+.employees-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1279px) {
+  .employees-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .employees-metrics {
+    grid-template-columns: 1fr;
+  }
+}

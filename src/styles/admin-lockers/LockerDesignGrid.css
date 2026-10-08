@@ -1,0 +1,462 @@
+/* =========================================================
+   BANORTE — LOCKER DESIGN
+   ========================================================= */
+
+.locker-design {
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   VIEWPORT
+   ========================================================= */
+
+.locker-design__viewport {
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding:
+    10px
+    8px
+    14px;
+
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    #b9bbc0
+    transparent;
+}
+
+
+.locker-design__viewport::-webkit-scrollbar {
+  height: 8px;
+}
+
+
+.locker-design__viewport::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.locker-design__viewport::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background: #b9bbc0;
+}
+
+
+/* =========================================================
+   MODULES
+   ========================================================= */
+
+.locker-design__modules {
+  display: flex;
+
+  width: max-content;
+  min-width: 100%;
+
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   STANDARD MODULE
+   ========================================================= */
+
+.locker-module {
+  flex:
+    0 0
+    auto;
+
+  padding: 5px;
+
+  border:
+    1px solid
+    #d8dadd;
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f8f9fa,
+      #f2f3f4
+    );
+
+  box-shadow:
+    0 1px 2px
+      rgba(
+        15,
+        23,
+        42,
+        0.025
+      );
+}
+
+
+.locker-module__body {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      102px
+    );
+
+  gap: 4px;
+}
+
+
+.locker-module__column {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+/* =========================================================
+   DOOR
+   ========================================================= */
+
+.locker-design__door {
+  position: relative;
+
+  display: flex;
+
+  width: 102px;
+  height: 70px;
+
+  flex-direction: column;
+
+  align-items: stretch;
+  justify-content: space-between;
+
+  padding:
+    8px
+    9px;
+
+  border:
+    1px solid
+    #d5d7da;
+
+  border-radius: 5px;
+
+  outline: none;
+
+  background:
+    #ffffff;
+
+  color:
+    #34363a;
+
+  font-family: inherit;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform
+      120ms ease,
+    border-color
+      140ms ease,
+    background
+      140ms ease,
+    box-shadow
+      140ms ease;
+}
+
+
+.locker-design__door:hover {
+  z-index: 2;
+
+  border-color:
+    #aaadb2;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 4px 12px
+      rgba(
+        15,
+        23,
+        42,
+        0.09
+      );
+
+  transform:
+    translateY(
+      -1px
+    );
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.locker-design__door-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 6px;
+}
+
+
+.locker-design__door-size {
+  display: inline-flex;
+
+  min-width: 22px;
+  height: 20px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    0
+    6px;
+
+  border-radius: 6px;
+
+  background:
+    #f1f2f3;
+
+  color:
+    #606267;
+
+  font-size:
+    9px;
+
+  font-weight:
+    750;
+}
+
+
+/* =========================================================
+   EMPLOYEE
+   ========================================================= */
+
+.locker-design__door-employee {
+  display: flex;
+
+  width: 21px;
+  height: 21px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      79,
+      82,
+      160,
+      0.1
+    );
+
+  color:
+    #595da5;
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.locker-design__door-number {
+  color:
+    #292a2e;
+
+  font-size:
+    13px;
+
+  font-weight:
+    750;
+
+  letter-spacing:
+    -0.01em;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.locker-design__door-footer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color:
+    #92949a;
+
+  font-size:
+    7px;
+
+  font-weight:
+    600;
+}
+
+
+.locker-design__door-status {
+  width: 5px;
+  height: 5px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+}
+
+
+.locker-design__door-status--available {
+  background:
+    #b8bbc0;
+}
+
+
+.locker-design__door-status--occupied {
+  background:
+    #6368ad;
+}
+
+
+.locker-design__door-status--open {
+  background:
+    #059669;
+}
+
+
+/* =========================================================
+   AVAILABLE
+   ========================================================= */
+
+.locker-design__door--available {
+  background:
+    #ffffff;
+}
+
+
+/* =========================================================
+   OCCUPIED
+   ========================================================= */
+
+.locker-design__door--occupied {
+  border-color:
+    #c9cbf4;
+
+  background:
+    #f7f7ff;
+}
+
+
+.locker-design__door--occupied:hover {
+  border-color:
+    #999ddd;
+
+  background:
+    #f2f2ff;
+}
+
+
+/* =========================================================
+   OPEN
+   ========================================================= */
+
+.locker-design__door--open {
+  border-color:
+    #9bdcc9;
+
+  background:
+    #f1fbf8;
+}
+
+
+/* =========================================================
+   SELECTED
+   ========================================================= */
+
+.locker-design__door--selected {
+  z-index: 3;
+
+  border-color:
+    #eb0029 !important;
+
+  box-shadow:
+    0 0 0 2px
+      rgba(
+        235,
+        0,
+        41,
+        0.08
+      ) !important;
+}
+
+
+/* =========================================================
+   DARK
+   ========================================================= */
+
+.dark
+  .locker-module {
+  border-color:
+    #3c3e42;
+
+  background:
+    #25272a;
+}
+
+
+.dark
+  .locker-design__door {
+  border-color:
+    #414348;
+
+  background:
+    #2c2e32;
+
+  color:
+    #f4f4f5;
+}
+
+
+.dark
+  .locker-design__door-number {
+  color:
+    #f4f4f5;
+}
+
+
+/* =========================================================
+   RESPONSIVE SIZE
+   ========================================================= */
+
+@media (
+  max-width: 1400px
+) {
+  .locker-module__body {
+    grid-template-columns:
+      repeat(
+        2,
+        92px
+      );
+  }
+
+
+  .locker-design__door {
+    width: 92px;
+    height: 66px;
+  }
+}
